@@ -3,7 +3,11 @@ Web app that lets users view and leave comments on the latest news; using Mongoo
 
 # Deployment
 * GitHub
+https://cchin1.github.io/mongoscraper/
 * Heroku
+ https://mongoscrapelab.herokuapp.com/
+* Heroku Git URL
+ https://git.heroku.com/mongoscrapelab.git
 
 # Technologies Used
 * Node.js
@@ -24,7 +28,7 @@ This command will add the free mLab provision to your project.
 
 When you go to connect your mongo database to mongoose, do so the following way:
 
-// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 mongoose.connect(MONGODB_URI);
@@ -37,7 +41,6 @@ A web-scraper app that accomplishes the following:
 * Headline - the title of the article
 * URL - the url to the original article
 * Users should also be able to leave comments on the articles displayed and revisit them later. The comments should be saved to the database as well and associated with their articles. Users should also be able to delete comments left on articles. All stored comments should be visible to every user.
-
 
 Whenever you scrape a site for stories, make sure an article isn't already represented in your database before saving it; Do not save any duplicate entries.
 

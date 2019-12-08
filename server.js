@@ -160,7 +160,6 @@ app.get("/articles/:id", function(req, res) {
   });
 });
 
-
 // Save an article
 app.post("/articles/save/:id", function(req, res) {
       // Use the article id to find and update its saved boolean
@@ -194,7 +193,6 @@ app.post("/articles/delete/:id", function(req, res) {
         }
       });
 });
-
 
 // Create a new note
 app.post("/notes/save/:id", function(req, res) {
