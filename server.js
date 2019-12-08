@@ -5,6 +5,9 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var path = require("path");
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localholst/mongoHeadlines";
+mongoose.connect(MONGODB_URI);
+
 // Requiring Note and Article models
 var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
