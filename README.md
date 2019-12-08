@@ -15,12 +15,10 @@ Web app that lets users view and leave comments on the latest news; using Mongoo
 * cheerio
 * axios
 
-
-Before You Begin
+# Before You Begin
 In order to deploy your project to Heroku, you must set up an mLab provision. mLab is remote MongoDB database that Heroku supports natively. Follow these steps to get it running:
 
-Create a Heroku app in your project directory.
-Run this command in your Terminal/Bash window:
+Create a Heroku app in your project directory. Run this command in your Terminal/Bash window:
 heroku addons:create mongolab
 This command will add the free mLab provision to your project.
 
@@ -32,7 +30,6 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines
 mongoose.connect(MONGODB_URI);
 
 This code should connect mongoose to your remote mongolab database if deployed, but otherwise will connect to the local mongoHeadlines database on your computer.
-
 
 # Overview of App
 A web-scraper app that accomplishes the following:
@@ -48,11 +45,12 @@ Don't just clear out your database and populate it with scraped articles wheneve
 
 If your app deletes stories every time someone visits, your users won't be able to see any comments except the ones that they post.
 
-Helpful Links
-
-MongoDB Documentation
-Mongoose Documentation
-Cheerio Documentation
+# How the App Works
+* Scrape articles by clicking the "Scrape Articles" button
+* Once articles are loaded, the full article by clicking the link in each article's panel and save articles by clicking the "Save Article" button.
+* Saved articles can be viewed at the "Saved Articles" page
+* Comments can be added on saved articles by clicking the "Add a Note" button
+* Saved articles can be deleted by clicking the "Delete" 
 
 # Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
